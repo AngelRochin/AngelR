@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head_contenido"></head>
+<body>
+    <div class="container">
+        <main>
+            <div id="header_contenido"></div>
+            <div class="card">
+                <img src="/img/Albumes.jpeg" class="card-img-top" alt="Imagen P01" style="width: 15rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Practica 02</h5>
+                    <p class="card-text">Usar el objeto nativo XMLHttpRequest para realizar transferencias</p>
+                    
+                    <button id="cargar" type="button" class="btn btn-primary">Cargar</button>
+                    <button id="limpiar" type="button" class="btn btn-warning">Limpiar</button>
+                    <br><br>
+                    <center>
+                        <h2>Listado de Usuarios</h2><br>
+                        <table class="table" id="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">User ID</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Correo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody"></tbody>
+                        </table>
+                    </center>
+                    <p id="Mensaje" class="card-text"></p>
+
+                    <div class="mb-3">
+                        <input type="number" id="inputBusqueda" class="form-control" placeholder="Buscar por ID">
+                        <button id="buscar" type="button" class="btn btn-success mt-2">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer_contenido"></div>
+        </footer>
+    </div>
+</body>
+<script src="/js/partials.js"></script>
+<script src="/js/p02.js"></script>
+</html>

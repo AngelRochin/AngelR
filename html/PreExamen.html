@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head_contenido"></head>
+
+<body>
+    <div class="container">
+        <main>
+            <div id="header_contenido"></div>
+
+            <div class="card">
+                <img src="/img/paisFut.jpeg" class="card-img-top" alt="Imagen P01" style="width: 15rem;">
+                <div class="card-body">
+                    <h5 class="card-title">PreExamen</h5>
+                    <p class="card-text">Usar el objeto nativo fetch para buscar información de bebidas</p>
+                    
+                    <input type="text" placeholder="Escribir el nombre del país" id="txtPais">
+                    <button id="btnBuscar" type="button" class="btn btn-primary">Buscar</button>
+                    <button id="limpiar" type="button" class="btn btn-warning">Limpiar</button>
+
+                    <center>
+                    <table class="table" id="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre Común</th>
+                                <th>Nombre Oficial</th>
+                                <th>Población</th>
+                                <th>Capital</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+
+                    
+                    <div>
+                        <img src="/img/paises.jpeg" alt="Bandera del país" id="banderaPais" >
+                    </div>
+                    </center>
+                    <p id="Mensaje" class="card-text"></p>
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="footer_contenido"></div>
+        </footer>
+    </div>
+</body>
+
+<script src="/js/partials.js"></script>
+<script src="/js/Preexamen.js"></script>
+
+</html>
