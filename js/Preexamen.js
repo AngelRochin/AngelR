@@ -15,7 +15,7 @@ function buscarPais() {
     banderaImg.style.display = "none"; // Ocultar la bandera antes de mostrar el resultado
 
     if (!pais) {
-        mensaje.innerHTML = "Por favor, ingrese el nombre exacto de un país.";
+        mensaje.innerHTML = "ingresa el nombre de un pais.";
         return;
     }
 
@@ -33,11 +33,9 @@ function buscarPais() {
             );
 
             if (!paisEncontrado) {
-                mensaje.innerHTML = "No se encontró un país con ese nombre exacto.";
+                mensaje.innerHTML = "No se encontró un país con ese nombre.";
                 return;
             }
-
-            mensaje.innerHTML = `País encontrado:`;
             mostrarPais(paisEncontrado);
         })
         .catch(error => {
@@ -48,19 +46,20 @@ function buscarPais() {
 function mostrarPais(pais) {
     limpiar();
 
+    const idiomas = pais.languages ? Object.values(pais.languages).join(", ") : "N/A";
     const fila = document.createElement('tr');
     fila.innerHTML = `
         <td style="font-size: 16px; font-weight: bold;">1</td>
         <td style="font-size: 14px;">${pais.name.common}</td>
-        <td style="font-size: 14px;">${pais.name.official}</td>
+        <td style="font-size: 14px;">${idiomas}</td>
         <td style="font-size: 14px;">${pais.population.toLocaleString()}</td>
         <td style="font-size: 14px;">${pais.capital ? pais.capital[0] : "N/A"}</td>
     `;
     tbody.appendChild(fila);
 
-    
+    /*
     banderaImg.src = pais.flags.png;
-    banderaImg.style.display = "block";
+    banderaImg.style.display = "block"; */
 }
 
 function limpiar() {
